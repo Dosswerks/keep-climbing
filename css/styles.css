@@ -74,6 +74,24 @@ html, body {
 #hud .hud-item { display: flex; align-items: center; gap: 4px; }
 #hud .hud-item:last-child { justify-content: flex-end; }
 
+.hud-stack {
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.2;
+}
+
+.hud-stack .hud-label {
+  font-size: 10px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hud-stack #hud-score,
+.hud-stack #hud-question {
+  font-size: 16px;
+}
+
 #hud-feedback {
   padding: 2px 12px;
   border-radius: 6px;
