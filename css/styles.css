@@ -627,6 +627,7 @@ html, body {
 
 /* Responsive */
 @media (max-width: 600px) {
+  #sky-region { flex: 0 0 33vh; }
   #question-text { font-size: 16px; }
   .answer-zone { font-size: 13px; padding: 8px 6px; min-height: 60px; }
   #hud { font-size: 12px; padding: 4px 8px; }
