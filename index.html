@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Keep Climbing</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="game-container">
+  <!-- Upper region: Canvas sky + plane -->
+  <div id="sky-region">
+    <canvas id="sky-canvas"></canvas>
+    <div id="altitude-meter" role="progressbar" aria-label="Altitude progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <span id="altitude-label">0/0</span>
+      <div id="altitude-fill" style="height:0%"></div>
+    </div>
+    <div id="toolbar">
+      <button id="btn-mute" aria-label="Mute audio" title="Mute">&#x1F50A;</button>
+      <button id="btn-help" aria-label="Help" title="Help">?</button>
+      <button id="btn-pause" aria-label="Pause" title="Pause">&#x23F8;</button>
+    </div>
+    <div id="feedback-caption" aria-live="polite"></div>
+  </div>
+
+  <!-- Lower region: Question + Answers -->
+  <div id="ui-region">
+    <div id="hud" aria-live="polite">
+      <span class="hud-item">Score: <span id="hud-score">0</span></span>
+      <span class="hud-item" id="hud-feedback"></span>
+      <span class="hud-item">Question: <span id="hud-question">1 / 5</span></span>
+    </div>
+    <div id="timer-bar"><div id="timer-fill" style="width:100%"></div></div>
+    <div id="question-area">
+      <div id="question-text" role="heading" aria-level="2"></div>
+      <div id="answer-zones" role="group" aria-label="Answer options">
+        <button class="answer-zone" data-answer="A" role="option" tabindex="0">
+          <span class="zone-label">A</span><span class="zone-text"></span>
+        </button>
+        <button class="answer-zone" data-answer="B" role="option" tabindex="0">
+          <span class="zone-label">B</span><span class="zone-text"></span>
+        </button>
+        <button class="answer-zone" data-answer="C" role="option" tabindex="0">
+          <span class="zone-label">C</span><span class="zone-text"></span>
+        </button>
+        <button class="answer-zone" data-answer="D" role="option" tabindex="0">
+          <span class="zone-label">D</span><span class="zone-text"></span>
+        </button>
+      </div>
+      <div id="feedback-slot">
+        <div id="explanation-box" class="hidden"></div>
+        <button id="btn-next-question" class="btn btn-primary hidden">NEXT QUESTION ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlays -->
+  <div id="start-screen" class="overlay">
+    <img id="start-logo" class="hidden" src="" alt="Logo">
+    <h1 id="start-title">Keep Climbing</h1>
+    <p class="subtitle" id="start-subtitle"></p>
+    <p class="instructions" id="start-instructions">Steer the plane to the correct answer. Correct answers climb higher!</p>
+    <input type="text" id="name-input" class="hidden" placeholder="Enter your name" aria-label="Player name">
+    <div class="btn-group">
+      <button class="btn btn-primary" id="btn-start">Start</button>
+    </div>
+    <p class="disclosure" id="start-disclosure">Results are stored locally in your browser.</p>
+    <div id="loading-bar" class="hidden"><div id="loading-fill"></div></div>
+  </div>
+
+  <div id="resume-screen" class="overlay hidden">
+    <h2>Saved Progress Found</h2>
+    <p>Resume where you left off or start over?</p>
+    <div class="btn-group">
+      <button class="btn btn-primary" id="btn-resume">Resume</button>
+      <button class="btn" id="btn-start-over">Start Over</button>
+    </div>
+  </div>
+
+  <div id="pause-screen" class="overlay hidden">
+    <h1>PAUSED</h1>
+    <div class="btn-group">
+      <button class="btn btn-primary" id="btn-unpause">Resume</button>
+    </div>
+  </div>
+
+  <div id="help-screen" class="overlay hidden">
+    <h2>How to Play</h2>
+    <p>Drag the plane toward the correct answer, or use arrow keys and Enter.</p>
+    <p>Correct answers earn 100 points. Build streaks for multipliers!</p>
+    <p>Press P to pause. Press H for help. Press M to mute.</p>
+    <div class="btn-group">
+      <button class="btn btn-primary" id="btn-close-help">Got It</button>
+    </div>
+  </div>
+
+  <div id="complete-screen" class="overlay hidden">
+    <h1 id="complete-title">Congratulations!</h1>
+    <div class="score-display" id="final-score">0</div>
+    <div class="rating" id="final-rating"></div>
+    <div class="stats" id="final-stats"></div>
+    <div class="category-breakdown" id="category-breakdown"></div>
+    <div class="btn-group" id="complete-buttons"></div>
+  </div>
+
+  <div id="review-screen" class="overlay hidden"></div>
+</div>
+
+<!-- Game Engine Modules -->
+<script src="js/event-emitter.js?v=1"></script>
+<script src="js/config-manager.js?v=1"></script>
+<script src="js/question-loader.js?v=1"></script>
+<script src="js/game-state-machine.js?v=1"></script>
+<script src="js/game-logic.js?v=1"></script>
+<script src="js/persistence-manager.js?v=1"></script>
+<script src="js/i18n-manager.js?v=1"></script>
+<script src="js/audio-manager.js?v=2"></script>
+<script src="js/animation-manager.js?v=1"></script>
+<script src="js/accessibility-manager.js?v=1"></script>
+<script src="js/renderer.js?v=22"></script>
+<script src="js/input-manager.js?v=3"></script>
+<script src="js/main.js?v=29"></script>
+
+</body>
+</html>

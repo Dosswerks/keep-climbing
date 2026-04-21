@@ -1,0 +1,87 @@
+{
+  "game_id": "sample-trivia",
+  "version": "1.0.0",
+  "shuffle_questions": true,
+  "config": {
+    "title": "Keep Climbing",
+    "subtitle": "Sample Trivia Game",
+    "primaryColor": "#003366",
+    "backgroundColor": "#87CEEB",
+    "logo": "assets/images/logo.png",
+    "planeSprite": "assets/images/plane.png",
+    "audioEnabled": true,
+    "timeLimitPerQuestion": null,
+    "shuffle_questions": true,
+    "animationSpeed": 1.0,
+    "showExplanations": true,
+    "showCategoryBreakdown": true,
+    "requirePlayerName": false
+  },
+  "questions": [
+    {
+      "question": "What is the primary function of an aircraft's ailerons?",
+      "options": {
+        "A": "Control roll (banking left and right)",
+        "B": "Control pitch (nose up and down)",
+        "C": "Control yaw (nose left and right)",
+        "D": "Increase lift during takeoff"
+      },
+      "correctAnswer": "A",
+      "explanation": "Ailerons are hinged surfaces on the trailing edge of each wing that move in opposite directions to control the aircraft's roll axis.",
+      "category": "Aircraft Systems",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the term 'crosscheck' mean in cabin crew procedures?",
+      "options": {
+        "A": "Verify that overhead bins are closed",
+        "B": "Verify another crew member's door is armed or disarmed",
+        "C": "Count the number of passengers on board",
+        "D": "Check the weather at the destination"
+      },
+      "correctAnswer": "B",
+      "explanation": "Crosscheck is a standard safety procedure where each crew member verifies the door status set by the crew member on the opposite side.",
+      "category": "Safety Procedures",
+      "difficulty": "easy"
+    },
+    {
+      "question": "At what altitude is the cabin typically pressurized to during cruise flight?",
+      "options": {
+        "A": "Sea level (0 feet)",
+        "B": "6,000 to 8,000 feet equivalent",
+        "C": "15,000 feet equivalent",
+        "D": "The same as the actual cruising altitude"
+      },
+      "correctAnswer": "B",
+      "explanation": "Modern aircraft cabins are pressurized to an equivalent altitude of 6,000 to 8,000 feet, even when cruising at 35,000+ feet.",
+      "category": "Aircraft Systems",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of the sterile cockpit rule?",
+      "options": {
+        "A": "Keep the cockpit physically clean at all times",
+        "B": "Restrict non-essential conversation below 10,000 feet",
+        "C": "Prevent passengers from entering the cockpit",
+        "D": "Require pilots to wear sterile gloves during flight"
+      },
+      "correctAnswer": "B",
+      "explanation": "The sterile cockpit rule (FAR 121.542) restricts crew from non-essential activities during critical phases of flight, typically below 10,000 feet.",
+      "category": "Safety Procedures",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does ETOPS stand for in aviation?",
+      "options": {
+        "A": "Extended Twin Operations Performance Standards",
+        "B": "Extended-range Twin-engine Operations",
+        "C": "Emergency Takeoff and Operations Procedures",
+        "D": "Engine Testing and Operational Parameters System"
+      },
+      "correctAnswer": "B",
+      "explanation": "ETOPS (Extended-range Twin-engine Operations) certifies twin-engine aircraft to fly routes that take them far from diversion airports.",
+      "category": "Operations",
+      "difficulty": "hard"
+    }
+  ]
+}
