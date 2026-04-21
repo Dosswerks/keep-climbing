@@ -98,11 +98,11 @@ html, body {
   font-weight: normal;
 }
 
-/* Question area — three equal rows */
+/* Question area — three rows, top row shorter */
 #question-area {
   flex: 1 1 auto;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 0.7fr 1fr 1fr;
   padding: 0 16px;
   min-height: 0;
   justify-items: center;
